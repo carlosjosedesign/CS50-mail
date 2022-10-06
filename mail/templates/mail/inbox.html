@@ -2,13 +2,17 @@
 {% load static %}
 
 {% block body %}
-    <h2>{{ request.user.email }}</h2>
+    <div class="row justify-content-between align-items-end pt-3 mx-0">
+        <h2 class="m-0">{{ request.user.email }}</h2>
+        <a class="btn btn-sm btn-outline-danger" href="{% url 'logout' %}">Log Out</a>
+    </div>
+    <hr>
 
-    <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
-    <button class="btn btn-sm btn-outline-primary" id="compose">Compose</button>
-    <button class="btn btn-sm btn-outline-primary" id="sent">Sent</button>
-    <button class="btn btn-sm btn-outline-primary" id="archived">Archived</button>
-    <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+    <button class="boxbtn btn btn-sm btn-primary" id="inbox">Inbox</button>
+    <button class="boxbtn btn btn-sm btn-outline-primary" id="compose">Compose</button>
+    <button class="boxbtn btn btn-sm btn-outline-primary" id="sent">Sent</button>
+    <button class="boxbtn btn btn-sm btn-outline-primary" id="archive">Archived</button>
+
     <hr>
 
     <div id="emails-view">
@@ -27,7 +31,9 @@
                 <input class="form-control" id="compose-subject" placeholder="Subject">
             </div>
             <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
-            <input type="submit" class="btn btn-primary"/>
+            <div class="col-6 ml-auto my-4 pr-0">
+                <input type="submit" class="btn btn-success w-100"/>
+            </div>
         </form>
     </div>
 {% endblock %}

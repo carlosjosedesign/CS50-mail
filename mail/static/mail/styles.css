@@ -1,3 +1,57 @@
 textarea {
     min-height: 400px;
 }
+
+.mailLine{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.mailLine.read{
+    background: rgb(227, 226, 226);
+}
+.mailLine:hover{
+    background: #eee;
+}
+
+.mailCheck{
+    width: 25px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.mailFrom{
+    width: 25%;
+}
+.mailFrom.sents{
+    width: calc(25% + 25px);
+}
+.mailContent{
+    width: calc(65% - 25px);
+}
+
+
+.mailDate{
+    width: 20%;
+    text-align: right;
+    font-size:12px;
+    color: rgb(122, 122, 122);
+}
+
+#mailPage{
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+.mailHead{
+    padding: 1em 1.5em 0.8em;
+    border-bottom: 1px solid #eee;
+}
+
+.mailHead p{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.mailBody{
+    padding: 1em 1.5em 1.5em;
+}
